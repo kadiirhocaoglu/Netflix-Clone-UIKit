@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9311C03E2AA8920C00952680 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311C03D2AA8920C00952680 /* TypeAlias.swift */; };
 		9311C0402AA8972100952680 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311C03F2AA8972100952680 /* CollectionViewTableViewCell.swift */; };
+		9311C0422AA8B4D500952680 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311C0412AA8B4D500952680 /* HeroHeaderUIView.swift */; };
 		93BDF7462AA7B5DF0085D661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDF7452AA7B5DF0085D661 /* AppDelegate.swift */; };
 		93BDF7482AA7B5DF0085D661 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDF7472AA7B5DF0085D661 /* SceneDelegate.swift */; };
 		93BDF74A2AA7B5DF0085D661 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDF7492AA7B5DF0085D661 /* MainTabBarViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		9311C03D2AA8920C00952680 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		9311C03F2AA8972100952680 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		9311C0412AA8B4D500952680 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		93BDF7422AA7B5DF0085D661 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BDF7452AA7B5DF0085D661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93BDF7472AA7B5DF0085D661 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				9311C03F2AA8972100952680 /* CollectionViewTableViewCell.swift */,
+				9311C0412AA8B4D500952680 /* HeroHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93BDF7642AA7BA0D0085D661 /* SearchViewController.swift in Sources */,
+				9311C0422AA8B4D500952680 /* HeroHeaderUIView.swift in Sources */,
 				93BDF74A2AA7B5DF0085D661 /* MainTabBarViewController.swift in Sources */,
 				93BDF7462AA7B5DF0085D661 /* AppDelegate.swift in Sources */,
 				93BDF7482AA7B5DF0085D661 /* SceneDelegate.swift in Sources */,
