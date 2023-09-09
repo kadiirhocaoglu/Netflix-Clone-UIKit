@@ -10,6 +10,7 @@
 		9311C03E2AA8920C00952680 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311C03D2AA8920C00952680 /* TypeAlias.swift */; };
 		9311C0402AA8972100952680 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311C03F2AA8972100952680 /* CollectionViewTableViewCell.swift */; };
 		9311C0422AA8B4D500952680 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9311C0412AA8B4D500952680 /* HeroHeaderUIView.swift */; };
+		934CD6B82AA9EB1300859A72 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934CD6B72AA9EB1300859A72 /* APICaller.swift */; };
 		93BDF7462AA7B5DF0085D661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDF7452AA7B5DF0085D661 /* AppDelegate.swift */; };
 		93BDF7482AA7B5DF0085D661 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDF7472AA7B5DF0085D661 /* SceneDelegate.swift */; };
 		93BDF74A2AA7B5DF0085D661 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDF7492AA7B5DF0085D661 /* MainTabBarViewController.swift */; };
@@ -25,6 +26,7 @@
 		9311C03D2AA8920C00952680 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		9311C03F2AA8972100952680 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		9311C0412AA8B4D500952680 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		934CD6B72AA9EB1300859A72 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		93BDF7422AA7B5DF0085D661 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BDF7452AA7B5DF0085D661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93BDF7472AA7B5DF0085D661 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		93BDF75E2AA7B9270085D661 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				934CD6B72AA9EB1300859A72 /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				93BDF7622AA7B9E30085D661 /* UpcomingViewController.swift in Sources */,
 				9311C0402AA8972100952680 /* CollectionViewTableViewCell.swift in Sources */,
 				93BDF7662AA7BA3D0085D661 /* DowlandsViewController.swift in Sources */,
+				934CD6B82AA9EB1300859A72 /* APICaller.swift in Sources */,
 				9311C03E2AA8920C00952680 /* TypeAlias.swift in Sources */,
 				93BDF7602AA7B9B00085D661 /* HomeViewController.swift in Sources */,
 			);
