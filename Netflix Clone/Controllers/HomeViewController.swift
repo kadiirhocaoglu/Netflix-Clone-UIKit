@@ -15,14 +15,13 @@ class HomeViewController: UIViewController {
         return tableView
     }()
     // MARK: - Properties
-    let sectionTitles: [String] = ["Trending Movies", "Popular", "Trending TV", "Upcoming Movies", "Top Rated"]
+    let sectionTitles: [String] = ["Trending Movies", "Trending TV", "Popular",  "Upcoming Movies", "Top Rated"]
    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         view.addSubview(HomeFeedTableView)
-        
         HomeFeedTableView.delegate = self
         HomeFeedTableView.dataSource = self
         
@@ -31,6 +30,7 @@ class HomeViewController: UIViewController {
         
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         HomeFeedTableView.tableHeaderView = headerView
+        fecthData()
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -38,7 +38,67 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: - Functions
+    private func fecthData() {
+        getTrendingMovies()
+        getTrendingTv()
+        getUpcoming()
+        getTopRated()
+        getPopular()
+        
+    }
+    
+    private func getTrendingMovies() {
+        APICaller.shared.getTrendingMovies { results in
+            switch results {
+            case .success(let movies):
+                print(movies)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    private func getTrendingTv() {
+        APICaller.shared.getTrendingTv { results in
+            switch results {
+            case .success(let tvSeries):
+                print(tvSeries)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    private func getUpcoming() {
+        APICaller.shared.getUpcoming { results in
+          switch results {
+            case .success(let media):
+                print(media)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    private func getTopRated() {
+        APICaller.shared.getTopRated { results in
+          switch results {
+            case .success(let topRated):
+                print(topRated)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    private func getPopular() {
+        APICaller.shared.getPopular { results in
+          switch results {
+            case .success(let popular):
+                print(popular)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 
+    
     private func configureNavbar() {
         var image = UIImage(named: "logo_netflix")
         image = image?.withRenderingMode(.alwaysOriginal)
@@ -84,7 +144,8 @@ extension HomeViewController: ConfigureTableView{
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20 , y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .white
-        header.textLabel?.text = header.textLabel?.text?.capitalized
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
+        
         
     }
     

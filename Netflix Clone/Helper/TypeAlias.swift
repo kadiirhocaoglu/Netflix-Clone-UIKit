@@ -5,7 +5,6 @@
 //  Created by Kadir Hocaoğlu on 6.09.2023.
 //
 
-import Foundation
 import UIKit
 
 typealias ConfigureTableView = UITableViewDelegate & UITableViewDataSource
