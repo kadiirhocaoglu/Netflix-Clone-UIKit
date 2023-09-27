@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class TitleCollectionViewCell: UICollectionViewCell {
-    let identifier = "TitleCollectionViewCell"
+    static let identifier = "TitleCollectionViewCell"
     
     
     private let posterImageView: UIImageView = {
@@ -17,13 +17,9 @@ class TitleCollectionViewCell: UICollectionViewCell {
         image.contentMode = .scaleAspectFit
         return image
     }()
-
-    
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         contentView.addSubview(posterImageView)
     }
     
@@ -37,9 +33,8 @@ class TitleCollectionViewCell: UICollectionViewCell {
     }
     
     public func configure(with model: String) {
-        guard  let url: URL = URL(string: model) else {return}
-        posterImageView.sd_setImage(with: url, completed: nil)
-        
+         guard let url: URL = URL(string: "https://image.tmdb.org/t/p/w500/\(model)") else {return}
+         posterImageView.sd_setImage(with: url)
     }
     
 }
