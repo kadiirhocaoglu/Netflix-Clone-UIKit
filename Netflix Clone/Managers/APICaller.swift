@@ -17,6 +17,7 @@ struct Constants {
     static let for_DiscoverMovie = "/3/discover/movie?api_key="
     static let for_Search = "/3/search/movie?api_key="
     static let queryLead = "&query="
+
     static let googleAPI_BASE_ForSearch = "https://youtube.googleapis.com/youtube/v3/search?q="
     static let youtube_QuerySearchTrail = "&key="
 }
@@ -133,5 +134,19 @@ class APICaller {
         task.resume()
     }
     
-
+    func getMovie(with query: String, completion: @escaping (Result<VideoElement, Error>) -> Void  ) {
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        guard let url: URL = URL(string: "\(Constants.googleAPI_BASE_ForSearch)\(query)\(Constants.youtube_QuerySearchTrail)\(Constants.youtube_API_KEY)") else {return}
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil  else { return }
+            do {
+                let result = try JSONDecoder().decode(SearchYoutubeResponse.self, from: data)
+                
+                completion(.success(result.items[0]))
+            }catch {
+                completion(.failure(APIError.failedToGetData))
+            }
+        }
+        task.resume()
+    }
 }

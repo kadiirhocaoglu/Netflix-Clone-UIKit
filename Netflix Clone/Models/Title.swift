@@ -15,7 +15,7 @@ struct TrendingTitleResponse: Codable {
 // MARK: - Title
 struct Title: Codable {
     let id: Int?
-    let originalTitle, overview, posterPath: String?
+    let originalTitle, overview, posterPath, originalName: String?
     let popularity: Double?
     let voteAverage: Double?
     let voteCount: Int?
@@ -25,7 +25,8 @@ struct Title: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id
-        case originalTitle = "original_title" 
+        case originalTitle = "original_title"
+        case originalName = "original_name"
         case mediaType = "media_type"
         case overview
         case posterPath = "poster_path"
