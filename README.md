@@ -46,7 +46,8 @@ Web Site: https://bento.me/kadiirhocaoglu
 
 ## Screen Record
 
-![video](https://github.com/kadiirhocaoglu/Netflix-Clone-UIKit/assets/109167000/86df8378-3f6b-4db7-b380-aed71f00d8b9)
-
+| Screen Record |
+|---------|
+| <video src="https://github.com/kadiirhocaoglu/Netflix-Clone-UIKit/assets/109167000/86df8378-3f6b-4db7-b380-aed71f00d8b9" width="300"> |
 
 
