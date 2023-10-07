@@ -17,7 +17,8 @@ struct Constants {
     static let for_DiscoverMovie = "/3/discover/movie?api_key="
     static let for_Search = "/3/search/movie?api_key="
     static let queryLead = "&query="
-
+    static let youtube_API_KEY = "1"
+    static let API_Key = "11"
     static let googleAPI_BASE_ForSearch = "https://youtube.googleapis.com/youtube/v3/search?q="
     static let youtube_QuerySearchTrail = "&key="
 }
